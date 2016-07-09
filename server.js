@@ -7,7 +7,7 @@ var expressHandlebars = require('express-handlebars');
 var connection = require('./configuration/connection.js');
 var path = require('path');
 
-//static content from the "public" directory
+//static content from the "assets" directory
 app.use(express.static(__dirname + '/assets'));
 
 //parse application
