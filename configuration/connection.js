@@ -4,7 +4,7 @@ var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'SpaceRepetition_db'
+  database: 'SpacedRepetition_db'
 });
 
 connection.connect(function(err) {

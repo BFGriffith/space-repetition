@@ -1,2 +1,2 @@
-CREATE DATABASE SpaceRepetition_db;
-USE SpaceRepetition_db;
+CREATE DATABASE SpacedRepetition_db;
+USE SpacedRepetition_db;
