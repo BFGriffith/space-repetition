@@ -1,5 +1,5 @@
 {
-  "name": "space-repetition",
+  "name": "spaced-repetition",
   "version": "0.0.0",
   "description": "Create “decks” of “flashcards” and track your progress during dynamic study sessions reviewing what you’ve learned about various subjects in order to increase the effectiveness of your retention and comprehension.",
   "main": "server.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BFGriffith/space-repetition.git"
+    "url": "git+https://github.com/BFGriffith/spaced-repetition.git"
   },
   "keywords": [
     "Node.js",
@@ -23,9 +23,9 @@
   "author": "BFGriffith, ednas, codevelopit, BrotherBuck",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BFGriffith/space-repetition/issues"
+    "url": "https://github.com/BFGriffith/spaced-repetition/issues"
   },
-  "homepage": "https://github.com/BFGriffith/space-repetition#readme",
+  "homepage": "https://github.com/BFGriffith/spaced-repetition#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
