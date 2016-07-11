@@ -1,3 +1,3 @@
 var orm = require('../configuration/orm.js');
 
-module.exports = SpaceRepetition.js;
+module.exports = SpacedRepetition.js;
