@@ -1,2 +1,13 @@
 /*STYLES*/
-* { text-decoration: none; }
+
+.progress {
+
+	background-color: red;
+}
+.btn {
+	border-radius: 0px;
+}
+
+#carousel-cards {
+	background-color: red;
+}
