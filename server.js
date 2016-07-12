@@ -3,7 +3,7 @@ var express = require('express');
 var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
 var app = express();
-var expressHandlebars = require('express-handlebars');
+var exphbs = require('express-handlebars');
 var connection = require('./configuration/connection.js');
 var path = require('path');
 
@@ -20,7 +20,7 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-require('./controllers/SpaceRepetitionController.js')(app);
+require('./controllers/SpacedRepetitionController.js')(app);
 
 var port = 3000;
 app.listen(port, function() {
