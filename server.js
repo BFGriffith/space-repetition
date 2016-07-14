@@ -3,7 +3,7 @@ var express = require('express');
 var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
 var app = express();
-var exphbs = require('express-handlebars');
+app.use(express.static(process.cwd() + '/assets'));
 var connection = require('./configuration/connection.js');
 var mainModel = require('./models/SpacedRepetition.js');
 var mainController = require('./controllers/SpacedRepetitionController.js');
@@ -12,19 +12,20 @@ var path = require('path');
 var passport = require('passport')
   , LocalStrategy = require('passport-local').Strategy;
 
-//static content from the "assets" directory
-app.use(express.static(__dirname + '/assets'));
-
 //parse application
 app.use(bodyParser.urlencoded({
   extended: false
 }));
-app.use(express.static(process.cwd() + '/assets'));
+app.use(methodOverride('_method'));
+
+var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({
   defaultLayout: 'main'
 }));
 app.set('view engine', 'handlebars');
 
+var routes = require('./controllers/SpaceRepetitionController.js');
+app.use('/', routes);
 
 passport.use(new LocalStrategy(
   function(studentEmail, studentPassword, done) {
@@ -40,10 +41,6 @@ passport.use(new LocalStrategy(
     });
   }
 ));
-
-var routes = require('./controllers/SpaceRepetitionController.js')(app);
-app.use('/', routes);
-
 
 
 var port = 3000;
