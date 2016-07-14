@@ -11,3 +11,11 @@
 #carousel-cards {
 	background-color: red;
 }
+
+.thumbnail {
+	border: 50px;
+}
+
+.caption {
+	background-color: green;
+}
