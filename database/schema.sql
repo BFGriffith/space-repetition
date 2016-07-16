@@ -15,7 +15,7 @@ CREATE TABLE subjects
 (
     subjectID int NOT NULL AUTO_INCREMENT,
     subject varchar(255) NOT NULL,
-	PRIMARY KEY (subjectID),
+	  PRIMARY KEY (subjectID),
     studentID INT NOT NULL
 );
 
@@ -44,7 +44,7 @@ CREATE TABLE cards
     back varchar(1000) NOT NULL,
     studentID INT NOT NULL,
     subjectID INT NOT NULL,
-	deckID INT NOT NULL,
+	  deckID INT NOT NULL,
     PRIMARY KEY (cardID)
 );
 

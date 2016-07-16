@@ -1,7 +1,7 @@
 //consuming what comes from ORM
 var orm = require('../configuration/orm.js');
 
-var model = {
+var SRmodel = {
   authenticate: function(student) {
     orm.authenticate('', function(response){
       student(response);
@@ -9,4 +9,4 @@ var model = {
   }
 };
 
-module.exports = model;
+module.exports = SRmodel;

@@ -27,6 +27,7 @@ app.set('view engine', 'handlebars');
 var routes = require('./controllers/SpaceRepetitionController.js');
 app.use('/', routes);
 
+/*
 passport.use(new LocalStrategy(
   function(studentEmail, studentPassword, done) {
     orm.authenticate({ studentEmail: studentEmail }, function (err, user) {
@@ -41,7 +42,7 @@ passport.use(new LocalStrategy(
     });
   }
 ));
-
+*/
 
 var port = 3000;
 app.listen(port, function() {
