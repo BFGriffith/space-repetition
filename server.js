@@ -4,13 +4,10 @@ var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
 var app = express();
 app.use(express.static(process.cwd() + '/assets'));
-var connection = require('./configuration/connection.js');
-var mainModel = require('./models/SpacedRepetition.js');
-var mainController = require('./controllers/SpacedRepetitionController.js');
+
 var path = require('path');
 //passport.js
-var passport = require('passport')
-  , LocalStrategy = require('passport-local').Strategy;
+var passport = require('passport'), LocalStrategy = require('passport-local').Strategy;
 
 //parse application
 app.use(bodyParser.urlencoded({
@@ -24,7 +21,7 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-var routes = require('./controllers/SpaceRepetitionController.js');
+var routes = require('./controllers/SpacedRepetitionController.js');
 app.use('/', routes);
 
 /*
@@ -44,6 +41,7 @@ passport.use(new LocalStrategy(
 ));
 */
 
+//LISTENER:
 var port = 3000;
 app.listen(port, function() {
   console.log("Listening on PORT " + port);

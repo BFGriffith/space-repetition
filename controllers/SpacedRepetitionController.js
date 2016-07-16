@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 
 //models
-var SpacedRepetition = require('./models/SpacedRepetition.js');
+var mainModel = require('../models/SpacedRepetition.js');
 
 //passport.js
 var passport = require('passport'),
