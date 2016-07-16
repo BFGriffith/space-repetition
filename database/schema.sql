@@ -25,8 +25,13 @@ CREATE TABLE decks
     deckName varchar(255) NOT NULL,
     studentID INT NOT NULL,
     subjectID INT NOT NULL,
-    PRIMARY KEY (deckID)
+    PRIMARY KEY (deckID),
+    dateCreated datetime NOT NULL DEFAULT current_timestamp,
+    lastAccess datetime NOT NULL DEFAULT current_timestamp,
+    CounterofAccess INT NOT NULL
+
 );
+
 
 ALTER TABLE decks
 	ADD FOREIGN KEY (studentID) REFERENCES students(studentID);
