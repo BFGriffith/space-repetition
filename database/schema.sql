@@ -4,7 +4,10 @@ USE SpacedRepetition_db;
 CREATE TABLE students
 (
     studentID int NOT NULL AUTO_INCREMENT,
-    studentName varchar(255) NOT NULL,
+    studentFirstName varchar(255) NOT NULL,
+    studentLastName varchar(255) NOT NULL,
+    studentEmail varchar(255) NOT NULL,
+    studentPassword varchar(255) NOT NULL,
     PRIMARY KEY (studentID)
 );
 
@@ -12,7 +15,7 @@ CREATE TABLE subjects
 (
     subjectID int NOT NULL AUTO_INCREMENT,
     subject varchar(255) NOT NULL,
-	PRIMARY KEY (subjectID),
+	  PRIMARY KEY (subjectID),
     studentID INT NOT NULL
 );
 
@@ -35,7 +38,7 @@ CREATE TABLE decks
 
 ALTER TABLE decks
 	ADD FOREIGN KEY (studentID) REFERENCES students(studentID);
-    
+
 ALTER TABLE decks
     ADD FOREIGN KEY (subjectID) REFERENCES subjects(subjectID);
 
@@ -46,15 +49,15 @@ CREATE TABLE cards
     back varchar(1000) NOT NULL,
     studentID INT NOT NULL,
     subjectID INT NOT NULL,
-	deckID INT NOT NULL,
+	  deckID INT NOT NULL,
     PRIMARY KEY (cardID)
 );
 
 ALTER TABLE cards
     ADD FOREIGN KEY (studentID) REFERENCES students(studentID);
-    
+
 ALTER TABLE cards
     ADD FOREIGN KEY (subjectID) REFERENCES subjects(subjectID);
-    
+
 ALTER TABLE cards
     ADD FOREIGN KEY (deckID) REFERENCES decks(deckID);

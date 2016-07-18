@@ -1,15 +1,15 @@
 //dummy-data inserts:
 INSERT INTO students (studentName)
-VALUES ('Pedro Sivero');
+VALUES ('Pedro');
 
 INSERT INTO students (studentName)
-VALUES ('John Dispenette');
+VALUES ('John');
 
 INSERT INTO students (studentName)
-VALUES ('Ben Griffith');
+VALUES ('Ben');
 
 INSERT INTO students (studentName)
-VALUES ('Edna Neal');
+VALUES ('Edna');
 
 INSERT INTO students (studentName)
 VALUES ('Ari');
@@ -453,25 +453,25 @@ VALUES ('Handlebars', 9);
 
 --
 
-INSERT INTO decks (subject, studentID)
+INSERT INTO subjects (subject, studentID)
 VALUES ('jQuery', 10);
 
-INSERT INTO decks (subject, studentID)
+INSERT INTO subjects (subject, studentID)
 VALUES ('ORM', 10);
 
-INSERT INTO decks (subject, studentID)
+INSERT INTO subjects (subject, studentID)
 VALUES ('PHP', 10);
 
-INSERT INTO decks (subject, studentID)
+INSERT INTO subjects (subject, studentID)
 VALUES ('Java', 10);
 
-INSERT INTO decks (subject, studentID)
+INSERT INTO subjects (subject, studentID)
 VALUES ('Express', 10);
 
-INSERT INTO decks (subject, studentID)
+INSERT INTO subjects (subject, studentID)
 VALUES ('Handlebars', 10);
 
-INSERT INTO decks (subject, studentID)
+INSERT INTO subjects (subject, studentID)
 VALUES ('Firebase', 10);
 
 --
@@ -483,78 +483,88 @@ values ('Tags', 1, 3, 1);
 --
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('FTP', 2, 3, 1);
+values ('FTP', 2, 10, 1);
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('CSS Box Model', 2, 7, 1);
+values ('CSS Box Model', 2, 14, 1);
 --
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('SQL Statements', 3, 2, 1);
+values ('SQL Statements', 3, 16, 1);
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('CSS Box Model', 3, 3, 1);
+values ('CSS Box Model', 3, 17, 1);
 --
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('Bootstrap does', 4, 3, 1);
+values ('Bootstrap does', 4, 24, 1);
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('jQuery functions', 4, 7, 1);
+values ('jQuery functions', 4, 28, 1);
 --
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('Objects', 5, 1, 1);
+values ('Objects', 5, 29, 1);
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('Jasmine', 5, 3, 1);
+values ('Jasmine', 5, 31, 1);
 --
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('NPM commands', 6, 4, 1);
+values ('NPM commands', 6, 39, 1);
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('Node commands', 6, 5, 1);
+values ('Node commands', 6, 40, 1);
 --
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('Challenges of Space Computers', 7, 1, 1);
+values ('Challenges of Space Computers', 7, 43, 1);
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('Currents and Resistance', 7, 3, 1);
+values ('Currents and Resistance', 7, 45, 1);
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('Margaret Hamilton', 7, 6, 1);
+values ('Margaret Hamilton', 7, 48, 1);
 --
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('NoSQL', 8, 1, 1);
+values ('NoSQL', 8, 50, 1);
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('SQL Statements', 8, 2, 1);
+values ('SQL Statements', 8, 51, 1);
 --
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('NoSQL', 9, 2, 1);
+values ('NoSQL', 9, 58, 1);
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('Mustaches', 9, 7, 1);
+values ('Mustaches', 9, 63, 1);
 --
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('jQuery functions', 10, 1, 1);
+values ('jQuery functions', 10, 64, 1);
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('Making HTML with PHP', 10, 3, 1);
+values ('Making HTML with PHP', 10, 66, 1);
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('Express syntax', 10, 5, 1);
+values ('Express syntax', 10, 68, 1);
 
 INSERT INTO decks (deckName, StudentID, subjectID, CounterofAccess)
-values ('NoSQL', 10, 7, 1);
+values ('NoSQL', 10, 70, 1);
 --
 
 -----------Keep working from here---------------------
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("ls", "lists all items in directory", 1, 1, 1);
 
---INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
---values ();
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("mkdir", "makes a new directory", 1, 1, 1);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("cd", "used to move into a different directory", 1, 1, 1);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("git add -A", "prepares your data to move to github", 1, 1, 1);
+--
+
