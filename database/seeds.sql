@@ -408,5 +408,68 @@ values (".append() function", "Insert content, specified by the parameter, to th
 INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
 values (".ready() function", "Specify a function to execute when the DOM is fully loaded.", 4, 28, 6);
 
+--
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("Java", "Object Oriented Language", 5, 29, 7);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("Java", "is not JavaScript", 5, 29, 7);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("Testing", "Jasmine, use Jasmine", 5, 31, 8);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("Custom Equality testing", "You can customize how jasmine determines if two objects are equal by defining your own custom equality testers. A custom equality tester is a function that takes two arguments.", 5, 31, 8);
+
+--
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("NPM install <packet name>", "Installs an NPM packet", 6, 39, 9);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("npm update", "Updates your NPM packets", 6, 39, 9);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("node test.js ", "Runs test.js", 6, 40, 10);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("Node.js", "Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. ", 6, 40, 10);
+
+--
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("Gravity", "The MacBook Air always flies away in space", 7, 43, 11);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("Air", "The MacBook Air is now just called MacBook, since there's no Air in space", 7, 43, 11);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("Ohm", "The ohm (symbol: Ω) is the SI derived unit of electrical resistance, named after German physicist Georg Simon Ohm.", 7, 45, 12);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("Resistance", "is futile", 7, 45, 12);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("Margaret Hamilton", "Coined the word Software Engineering", 7, 48, 13);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("Margaret Hamilton programs", "Worked on Apollo and Skylab", 7, 48, 13);
+
+--
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("NoSQL", "Data is in objects", 8, 50, 14);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("Non SQL Database", "A NoSQL (originally referring to non SQL or non relational) database provides a mechanism for storage and retrieval of data which is modeled in means other than the tabular relations used in relational databases.", 8, 50, 14);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("SELECT", "Selects from a set of data", 8, 51, 14);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("DROP TABLE", "Deletes that table", 8, 51, 14);
+
+--
 
 -----------Keep working from here---------------------
