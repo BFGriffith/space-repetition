@@ -1,29 +1,55 @@
-<div class="row">
-  
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="http://theinit.com/cv/images/deletecookies.jpg" alt="userStories">
-      <div class="caption">
-        <p><b>Card Deck {{{}}} </b><a href="#" class="btn btn-primary" role="button">Study This Deck <span class="badge">3</span></a></p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="http://www.stellman-greene.com/blog/wp-content/uploads/2007/12/what-the.png" alt="userStories">
-      <div class="caption">
-            <p>Card Deck {{{}}} <a href="#" class="btn btn-primary" role="button">Study This Deck <span class="badge">3</span></a></p>
-      </div>
-    </div>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="http://imgs.xkcd.com/comics/pointers.png" alt="userStories">
-      <div class="caption">
-        <p>Card Deck {{{}}} <a href="#" class="btn btn-primary" role="button">Study This Deck <span class="badge">3</span></a></p>
-      </div>
-    </div>
-  </div>  
-</div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title>
+  <meta name="description" content="Create “decks” of “flashcards” and track your progress during dynamic study sessions reviewing what you’ve learned about various subjects in order to increase the effectiveness of your retention and comprehension.">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css" type="text/css">
+</head>
+
+<body>
+
+        <br>
+
+            <!-- Jumbotron -->
+            <div class="jumbotron">
+                <h1 class="text-center">SPACED REPETITION</h1>
+                <h2 class="text-center">DASHBOARD</h2>
+            </div>
+
+        <ul>
+  
+    <li>
+        <input type="hidden" name="info" value="{{this.info}}">
+        <a href="/dashboard/{{this.info}}">MY INFO</a>
+    </li>
+    <li>
+      <input type="hidden" name="subject1" value="{{this.subject1}}">
+      <a href="/dashboard/{{this.subject1}}">MY SUBJECTS</a>
+    </li>
+    <li> 
+      <input type="hidden" name="subject2" value="{{this.subject2}}">
+      <a href="/dashboard/{{this.subject2}}">VIEW SUBJECTS</a>
+    </li>
+    <li> 
+      <input type="hidden" name="subject3" value="{{this.subject3}}">
+      <a href="/dashboard/{{this.subject3}}">ADD SUBJECT</a>
+    </li>
+    <li> 
+      <input type="hidden" name="settings" value="{{this.settings}}">
+      <a href="/dashboard/{{this.settings}}">SETTINGS</a>
+    </li>
+
+        </ul>
+
+
+
+
+
+</body>
+
+</HTML>
