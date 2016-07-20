@@ -1,48 +1,44 @@
-//dependencies
 var express = require('express');
-var methodOverride = require('method-override');
-var bodyParser = require('body-parser');
+var flash = require('connect-flash');
 var app = express();
-app.use(express.static(process.cwd() + '/assets'));
-
-var path = require('path');
-//passport.js
-var passport = require('passport'), LocalStrategy = require('passport-local').Strategy;
-
-//parse application
-app.use(bodyParser.urlencoded({
-  extended: false
-}));
-app.use(methodOverride('_method'));
-
 var exphbs = require('express-handlebars');
-app.engine('handlebars', exphbs({
-  defaultLayout: 'main'
-}));
+var bodyParser = require('body-parser');
+var passport = require('passport');
+var session = require('express-session');
+var orm = require('./configuration/orm.js');
+var PORT = 8080;
+
+//Handlebars-------------------------------------------------------
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
+//-----------------------------------------------------------------
 
-var routes = require('./controllers/SpacedRepetitionController.js');
-app.use('/', routes);
+//Middleware-------------------------------------------------------
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.text());
+app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
-/*
-passport.use(new LocalStrategy(
-  function(studentEmail, studentPassword, done) {
-    orm.authenticate({ studentEmail: studentEmail }, function (err, user) {
-      if (err) { return done(err); }
-      if (!user) {
-        return done(null, false, { message: 'Incorrect email.' });
-      }
-      if (!user.validPassword(studentPassword)) {
-        return done(null, false, { message: 'Incorrect password.' });
-      }
-      return done(null, user);
-    });
-  }
-));
-*/
+//session is used to keep the user logged in 
+app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }, resave: true, saveUninitialized: true}))
 
-//LISTENER:
-var port = 3000;
-app.listen(port, function() {
-  console.log("Listening on PORT " + port);
+//flash is used to show a message on an incorrect login
+app.use(flash());
+
+//passport middleware methods
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(express.static('public'));
+//-----------------------------------------------------------------
+
+
+//Routes-----------------------------------------------------------
+require('./routes/html-routes.js')(app);
+//-----------------------------------------------------------------
+
+orm.connectToDB();
+
+app.listen(PORT, function(){
+  console.log('listening on port', PORT)
 });

@@ -1,13 +1,37 @@
-//object relational mapping
-var connection = require('./connection.js');
+// Mysql
+var mysql = require('mysql');
 
-var orm = {
-  authenticate: function(tableInput, columnToSearch, valueOfColumn) {
-    var queryString = 'SECLECT * FROM ' + students + ' WHERE ' + studentEmail + ' = ?';
-    connection.query(queryString, [valueOfColumn], function(err, result){
-      console.log(result);
-    })
-  }
-};
+var connection = mysql.createConnection({
+	host: 'localhost',
+	user: 'root',
+	password: '',
+	database: 'SpacedRepetition_db'
+});
 
-module.exports = orm;
+function connectToDB(){
+	connection.connect(function(err){
+		if (err) {
+			console.error('error connection:', err.stack);
+			return
+		}
+		console.log('connected to MySQL DB')
+	});
+}
+
+module.exports.connectToDB = connectToDB;
+
+function addUserToDB(userObj, callback){
+	connection.query('INSERT INTO students SET ?', userObj, function(err, results){
+		if (err) return callback(false, err)
+		callback(true. null)
+	});
+}
+
+module.exports.addUserToDB = addUserToDB;
+
+function findUser(username, callback){
+	connection.query('SELECT * FROM students WHERE ?', {username: username}, function(err, user){
+		callback(err, user)
+	})
+}
+module.exports.findUser = findUser;
