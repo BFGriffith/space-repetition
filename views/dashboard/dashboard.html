@@ -16,12 +16,28 @@
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-    
+    <link href="..styles/styles.css" rel="stylesheet">
+    <link href="images/graphen2.jpg">
    
 </head>
-        
-<body>
+   <header> 
+     
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
 
+         <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+    
+
+    </header>
+
+
+<body>
+   
+<br>
     <div id="wrapper">
 
         <!-- Sidebar -->
@@ -58,6 +74,10 @@
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
+
+
+
+
         <div id="page-content-wrapper">
                            <div class="jumbotron">
                              <h1 align="center"><strong>SPACED REPETITION</strong></h1>
@@ -70,7 +90,7 @@
                         
                         <p>"Spaced repetition is a learning technique that incorporates increasing intervals of time between subsequent review of previously learned material in order to exploit the psychological spacing effect."</p>
                         
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                        
                     </div>
                 </div>
             </div>

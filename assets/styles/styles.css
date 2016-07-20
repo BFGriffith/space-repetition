@@ -1,5 +1,12 @@
 /*STYLES*/
 
+
+body {
+
+	background-image: url("dashboard/images/graphen2.jpg");
+}
+
+
 .progress {
 
 	background-color: red;
@@ -18,4 +25,24 @@
 
 .caption {
 	background-color: green;
+}
+
+
+
+
+
+#menu-toggle	{ visibility: hidden; 
+
+
+
+}
+
+@media only screen and (max-width: 640px)	{
+
+	#menu-toggle	{ visibility: visible; 
+
+
+
+}
+
 }
