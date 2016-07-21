@@ -20,6 +20,7 @@ function connectToDB(){
 
 module.exports.connectToDB = connectToDB;
 
+
 function addUserToDB(userObj, callback){
 	connection.query('INSERT INTO students SET ?', userObj, function(err, results){
 		if (err) return callback(false, err)
@@ -37,7 +38,7 @@ function findUser(username, callback){
 module.exports.findUser = findUser;
 
 
-
+/*
 
 // =========================
 //      NEW SUBJECTS
@@ -66,3 +67,4 @@ function addCardToDeck(){
 		res.redirect('/dashboard');
 	});
 }
+*/
