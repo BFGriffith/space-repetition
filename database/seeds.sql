@@ -472,4 +472,28 @@ values ("DROP TABLE", "Deletes that table", 8, 51, 14);
 
 --
 
------------Keep working from here---------------------
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("Firebase", "It's really cool", 9, 58, 16);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("Non SQL Database", "A NoSQL (originally referring to non relational database provides a mechanism for storage and retrieval of data which is modeled in means other than the tabular relations used in relational databases.", 9, 58, 16);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("Mustaches", "Look it catches the beer foam", 9, 63, 17);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("Card Front", "Card Back", 9, 63, 17);
+
+--
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("jQuery", "Simplifies writing functions", 10, 64, 18);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("Making HTML with PHP", "Data is on the server and is served to the php site to make html sites", 10, 66, 19);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("height is calculated", "height + padding-top + padding-bottom + border-top + border-bottom", 10, 68, 20);
+
+INSERT INTO cards (front, back, StudentID, SubjectID, deckID)
+values ("width is calculated", "width + padding-left + padding-right + border-left + border-right", 10, 70, 21);
