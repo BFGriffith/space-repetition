@@ -1,21 +1,17 @@
 /*STYLES*/
 
 .progress {
-
-	background-color: red;
+  background-color: red;
 }
 .btn {
-	border-radius: 0px;
+  border-radius: 0px;
 }
-
 #carousel-cards {
-	background-color: red;
+  background-color: red;
 }
-
 .thumbnail {
-	border: 50px;
+  border: 50px;
 }
-
 .caption {
-	background-color: green;
+  background-color: green;
 }
