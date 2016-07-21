@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var session = require('express-session');
 var orm = require('./configuration/orm.js');
-var PORT = 8080;
+var PORT = 8080 || process.env;
 
 //Handlebars-------------------------------------------------------
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
-//session is used to keep the user logged in 
+//session is used to keep the user logged in
 app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }, resave: true, saveUninitialized: true}))
 
 //flash is used to show a message on an incorrect login
