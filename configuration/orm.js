@@ -35,3 +35,34 @@ function findUser(username, callback){
 	})
 }
 module.exports.findUser = findUser;
+
+
+
+
+// =========================
+//      NEW SUBJECTS
+//   REVIEW ALL THIS STUFF
+// =========================
+var orm = {
+
+	addSubject: function addSubjectToDB(subjectName, callback){
+		connection.query('INSERT INTO subjects (subject) VALUES (?)', [subjectName], function(err, result){
+			if (err) throw err;
+			res.redirect('/dashboard');
+		});
+	}
+
+}
+function addDeckToSubject(ADD STUFF HERE){
+	connection.query('INSERT INTO decks (deck) VALUES (?)', [req.body.deck], function(err, result){
+		if (err) throw err;
+		res.redirect('/dashboard');
+	});
+}
+
+function addCardToDeck(){
+	connection.query('INSERT INTO cards (card) VALUES (?)', [req.body.card], function(err, result){
+		if (err) throw err;
+		res.redirect('/dashboard');
+	});
+}
