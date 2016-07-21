@@ -20,7 +20,6 @@ function connectToDB(){
 
 module.exports.connectToDB = connectToDB;
 
-
 function addUserToDB(userObj, callback){
 	connection.query('INSERT INTO students SET ?', userObj, function(err, results){
 		if (err) return callback(false, err)
