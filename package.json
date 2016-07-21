@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "Create “decks” of “flashcards” and track your progress during dynamic study sessions reviewing what you’ve learned about various subjects in order to increase the effectiveness of your retention and comprehension.",
   "main": "server.js",
+  "engines": {
+    "node": "4.4.6",
+    "npm": "2.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
