@@ -1,81 +1,73 @@
-    <div id="wrapper">
+<div id="wrapper">
 
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Spaced Repetition
-                    </a>
-                </li>
-                <li>
-                    <a href="#">Dashboard</a>
-                </li>
-                <li>
-                    <a href="#">My Info</a>
-                </li>
-                <li>
-                    <a href="#">My subjects</a>
-                </li>
-                <li>
-                    <a href="#">Test</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Test</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
+  <!-- sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a href="#">Spaced Repetition</a>
+      </li>
+      <li>
+        <a href="#">Dashboard</a>
+      </li>
+      <li>
+        <a href="#">My Info</a>
+      </li>
+      <li>
+        <a href="#">My subjects</a>
+      </li>
+      <li>
+        <a href="#">Test</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Test</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+  <!-- /#sidebar-wrapper -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <button href="#menu-toggle" type="button" class="btn btn-default" id="menu-toggle">
+            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+          </button>
+
+          <form class="cardCreation">
+            <fieldset class="form-group">
+              <label for="cardTitle">card label</label>
+              <input type="text" class="form-control" id="cardTitle" placeholder="card title?">
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="cardFront">question or prompt:</label>
+              <textarea class="form-control" id="cardFront" rows="3"></textarea>
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="cardBack">answer:</label>
+              <textarea class="form-control" id="cardBack" rows="5"></textarea>
+            </fieldset>
+            <button type="submit" class="btn btn-primary">create CARD</button>
+          </form>
+
+
         </div>
-        <!-- /#sidebar-wrapper -->
-<div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <button href="#menu-toggle" type="button" class="btn btn-default" id="menu-toggle">
-                          <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                        </button>
+      </div>
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
 
-<form class="cardCreation">
-  <fieldset class="form-group">
-    <label for="cardTitle">card label</label>
-    <input type="text" class="form-control" id="cardTitle" placeholder="card title?">
-  </fieldset>
-  <fieldset class="form-group">
-    <label for="cardFront">question or prompt:</label>
-    <textarea class="form-control" id="cardFront" rows="3"></textarea>
-  </fieldset>
-  <fieldset class="form-group">
-    <label for="cardBack">answer:</label>
-    <textarea class="form-control" id="cardBack" rows="5"></textarea>
-  </fieldset>
-  <button type="submit" class="btn btn-primary">create CARD</button>
-</form>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /#page-content-wrapper -->
-
-
-        <!-- End of wrapper -->
+  <!-- End of entire page wrapper -->
 </div>
 
-
-
-
-<!-- ====================
-Move to correct folder
- -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+<!-- move to correct folder -->
+<script>
+  $("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+  });
+</script>
