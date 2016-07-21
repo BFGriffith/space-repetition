@@ -75,7 +75,11 @@ module.exports = function(app){
 	//ROUTES:
 
 	app.get('/about', function(req, res){
-	 res.render('about');
+
+		orm.about("dfasdfasd", function(data){
+			res.render('about', {aboutData: data});
+		})
+	 
 	});
 
 	app.get('/cardCreation', function(req, res){
