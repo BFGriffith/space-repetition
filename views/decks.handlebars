@@ -18,29 +18,30 @@
     </ul>
   </div>
   <!-- /#sidebar-wrapper -->
+
+  <!-- Page Content -->
+  <!-- All page content must be within the page content wrapper -->
   <div id="page-content-wrapper">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12">
           <button href="#menu-toggle" type="button" class="btn btn-default" id="menu-toggle">
-            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+            <span class="hamburger_menu_toggle" aria-hidden="true"><img src="./images/folder_brain.png" alt="navigation sidebar toggle" height="50px" width="50px"></span>
           </button>
+          <br>
 
-          <form class="cardCreation">
-            <fieldset class="form-group">
-              <label for="cardTitle">card label</label>
-              <input type="text" class="form-control" id="cardTitle" placeholder="card title?">
-            </fieldset>
-            <fieldset class="form-group">
-              <label for="cardFront">question or prompt:</label>
-              <textarea class="form-control" id="cardFront" rows="3"></textarea>
-            </fieldset>
-            <fieldset class="form-group">
-              <label for="cardBack">answer:</label>
-              <textarea class="form-control" id="cardBack" rows="5"></textarea>
-            </fieldset>
-            <button type="submit" class="btn btn-primary">create CARD</button>
-          </form>
+          <div class="row">
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img src="./images/folder_brain.png" alt="default deck thumbnail">
+                <div class="caption">
+                  <h3>Thumbnail label</h3>
+                  <p>...</p>
+                  <p><a href="#" class="btn btn-info" role="button">study DECK</a> <a href="#" class="btn btn-info" role="button">ADD to deck</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
@@ -48,7 +49,7 @@
   </div>
   <!-- /#page-content-wrapper -->
 
-  <!-- End of entire page wrapper -->
+  <!-- END entire page wrapper -->
 </div>
 
 <!-- move to correct folder -->

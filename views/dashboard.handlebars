@@ -4,28 +4,16 @@
   <div id="sidebar-wrapper">
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
-        <a href="#">Spaced Repetition</a>
+        <a href="/">Spaced Repetition</a>
       </li>
       <li>
-        <a href="#">Dashboard</a>
+        <a href="/dashboard">Dashboard</a>
       </li>
       <li>
-        <a href="#">My Info</a>
+        <a href="/subjects">My SUBJECTS</a>
       </li>
       <li>
-        <a href="#">My subjects</a>
-      </li>
-      <li>
-        <a href="#">Test</a>
-      </li>
-      <li>
-        <a href="#">About</a>
-      </li>
-      <li>
-        <a href="#">Test</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
+        <a href="/about">About</a>
       </li>
     </ul>
   </div>
@@ -38,40 +26,19 @@
       <div class="row">
         <div class="col-lg-12">
           <button href="#menu-toggle" type="button" class="btn btn-default" id="menu-toggle">
-            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-          </button>
-          <h1>{{username}}</h1>
-          <p>{{findsubjects}}</p>
-          <h1>About</h1>
-          <p>Spaced Repetition is a study app. The idea is based on a learning technique that incorporates increasing intervals of time between subsequent review of previously learned material in order to exploit the psychological spacing effect.</p>
-          <h2>The Forgetting Curve</h2>
-          <img src="../assets/images/forgetting_curve.png.gif" alt="forgetting curve" height="200px" width="auto">
-          <h2>Spaced Repetition</h2>
-          <img src="../assets/images/spaced_repetition.gif" alt="spaced repetition" height="200px" width="auto">
-          <h2>TEAM + initial focus-area assignments:</h2>
-          <ul>
-            <li>Edna Neal — Slack = edna — GitHub = ednas</li>
-            <ul>
-              <li>MySQL — database design</li>
-            </ul>
-            <li>Pedro Sivero — Slack = psivero — GitHub = codevelopit</li>
-            <ul>
-              <li>wireframes, design, helping on back-end</li>
-            </ul>
-            <li>John Dispennette — Slack = brother_buck — GitHub = BrotherBuck</li>
-            <ul>
-              <li>HTML, bootstrap scaffolding</li>
-            </ul>
-            <li>Ben Griffith (team lead) — GitHub/Slack = BFGriffith</li>
-            <ul>
-              <li>node.js, Express, Handlebars</li>
-            </ul>
-          </ul>
+            <span class="hamburger_menu_toggle" aria-hidden="true"><img src="./images/folder_brain.png" alt="navigation sidebar toggle" height="50px" width="50px"></span>
+          </button><br>
 
-          <h1>Simple Sidebar</h1>
-          <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the
-            page content will be pushed off canvas.</p>
-          <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+          <div class="jumbotron">
+            <h1>Spaced Repetition DASHBOARD:</h1>
+            <p>Welcome to Spaced Repetition — a flashcard-based study application. The idea is based on a learning technique that incorporates increasing intervals of time between subsequent review of previously learned material in order to exploit the psychological spacing effect.</p>
+            <p><a class="btn btn-info btn-lg" href="/about" role="button">LEARN MORE!</a></p>
+          </div>
+
+          <ul class="nav nav-pills" role="tablist">
+            <li role="presentation" class="active"><a href="#">My SUBJECTS <span class="badge">42</span></a></li>
+            <li role="presentation"><a href="#">My DECKS <span class="badge">3</span></a></li>
+          </ul>
 
         </div>
       </div>
@@ -84,8 +51,10 @@
 
 <!-- move to correct folder -->
 <script>
-  $("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $("#wrapper").toggleClass("toggled");
+  document.addEventListener("DOMContentLoaded", function(event) {
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
   });
 </script>
