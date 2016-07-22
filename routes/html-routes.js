@@ -56,7 +56,7 @@ module.exports = function(app){
 		});
 	});
 
-	app.get('/dashboard', function(req,res){
+  app.get('/dashboard', function(req,res){
 		if (req.isAuthenticated()) {
 			orm.findSubjects('username', function(data) {
 				res.render('dashboard', {
@@ -75,15 +75,13 @@ module.exports = function(app){
 	  res.redirect('/');
 	});
 
-	//====================
 	//ROUTES:
 
 	app.get('/about', function(req, res){
-
 		orm.about("dfasdfasd", function(data){
 			res.render('about', {aboutData: data});
 		})
-	 
+
 	});
 
 	app.get('/cardCreation', function(req, res){
