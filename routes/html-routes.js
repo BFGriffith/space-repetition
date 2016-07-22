@@ -83,6 +83,18 @@ module.exports = function(app){
     */
 	});
 
+  app.get('/landingPage', function(req, res){
+   res.render('landingPage');
+  });
+
+  app.get('/subjects', function(req, res){
+   res.render('subjects');
+  });
+
+  app.get('/decks', function(req, res){
+   res.render('decks');
+  });
+
 	app.get('/cardCreation', function(req, res){
 	 res.render('cardCreation');
 	});
