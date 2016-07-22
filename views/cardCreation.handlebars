@@ -4,28 +4,16 @@
   <div id="sidebar-wrapper">
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
-        <a href="#">Spaced Repetition</a>
+        <a href="/">Spaced Repetition</a>
       </li>
       <li>
-        <a href="#">Dashboard</a>
+        <a href="/dashboard">Dashboard</a>
       </li>
       <li>
-        <a href="#">My Info</a>
+        <a href="/subjects">My SUBJECTS</a>
       </li>
       <li>
-        <a href="#">My subjects</a>
-      </li>
-      <li>
-        <a href="#">Test</a>
-      </li>
-      <li>
-        <a href="#">About</a>
-      </li>
-      <li>
-        <a href="#">Test</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
+        <a href="/about">About</a>
       </li>
     </ul>
   </div>
@@ -54,7 +42,6 @@
             <button type="submit" class="btn btn-primary">create CARD</button>
           </form>
 
-
         </div>
       </div>
     </div>
@@ -66,8 +53,10 @@
 
 <!-- move to correct folder -->
 <script>
-  $("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $("#wrapper").toggleClass("toggled");
+  document.addEventListener("DOMContentLoaded", function(event) {
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
   });
 </script>

@@ -4,28 +4,16 @@
   <div id="sidebar-wrapper">
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
-        <a href="#">Spaced Repetition</a>
+        <a href="/">Spaced Repetition</a>
       </li>
       <li>
-        <a href="#">Dashboard</a>
+        <a href="/dashboard">Dashboard</a>
       </li>
       <li>
-        <a href="#">My Info</a>
+        <a href="/subjects">My SUBJECTS</a>
       </li>
       <li>
-        <a href="#">My subjects</a>
-      </li>
-      <li>
-        <a href="#">Test</a>
-      </li>
-      <li>
-        <a href="#">About</a>
-      </li>
-      <li>
-        <a href="#">Test</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
+        <a href="/about">About</a>
       </li>
     </ul>
   </div>
@@ -43,9 +31,9 @@
           <h1>About</h1>
           <p>Spaced Repetition is a study app. The idea is based on a learning technique that incorporates increasing intervals of time between subsequent review of previously learned material in order to exploit the psychological spacing effect.</p>
           <h2>The Forgetting Curve</h2>
-          <img src="./public/images/forgetting_curve.png" alt="forgetting curve" height="200px" width="auto">
+          <img src="./images/forgetting_curve.png" alt="forgetting curve" height="400px" width="auto">
           <h2>Spaced Repetition</h2>
-          <img src="./public/images/spaced_repetition.png" alt="spaced repetition" height="200px" width="auto">
+          <img src="./images/spaced_repetition.png" alt="spaced repetition" height="400px" width="auto">
           <h2>TEAM + initial focus-area assignments:</h2>
           <ul>
             <li>Edna Neal — Slack = edna — GitHub = ednas</li>
@@ -66,11 +54,6 @@
             </ul>
           </ul>
 
-          <h1>Simple Sidebar</h1>
-          <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the
-            page content will be pushed off canvas.</p>
-          <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-
         </div>
       </div>
     </div>
@@ -82,8 +65,10 @@
 
 <!-- move to correct folder -->
 <script>
-  $("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $("#wrapper").toggleClass("toggled");
+  document.addEventListener("DOMContentLoaded", function(event) {
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
   });
 </script>
