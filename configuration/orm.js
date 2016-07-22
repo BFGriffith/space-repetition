@@ -39,30 +39,52 @@ module.exports.findUser = findUser;
 
 
 
+
+
 // =========================
 //      NEW SUBJECTS
 //   REVIEW ALL THIS STUFF
+	// GO BACK TO REVIEW
 // =========================
-var orm = {
+// var orm = {
 
-	addSubject: function addSubjectToDB(subjectName, callback){
-		connection.query('INSERT INTO subjects (subject) VALUES (?)', [subjectName], function(err, result){
-			if (err) throw err;
-			res.redirect('/dashboard');
-		});
-	}
+// 	addSubject: function(subject, userID, callback){
+// 		connection.query('INSERT INTO subjects (subject) VALUES (?)', [subjectName], function(err, result){
+// 			if (err) throw err;
+// 			res.redirect('/dashboard');
+// 		});
+// 	}
 
-}
-function addDeckToSubject(ADD STUFF HERE){
-	connection.query('INSERT INTO decks (deck) VALUES (?)', [req.body.deck], function(err, result){
-		if (err) throw err;
-		res.redirect('/dashboard');
-	});
-}
+// }
+// function addDeckToSubject(userID, deckName, subjectID, callback){
+// 	connection.query('INSERT INTO decks (deck) VALUES (?)', [req.body.deck], function(err, result){
+// 		if (err) throw err;
+// 		res.redirect('/dashboard');
+// 	});
+// }
 
-function addCardToDeck(){
-	connection.query('INSERT INTO cards (card) VALUES (?)', [req.body.card], function(err, result){
-		if (err) throw err;
-		res.redirect('/dashboard');
-	});
-}
+// function addCardToDeck(userID, subjectID, deckID, QUESTION, ANSWER, CALLBACK){
+// 	connection.query('INSERT INTO cards (card) VALUES (?)', [req.body.card], function(err, result){
+// 		if (err) throw err;
+// 		res.redirect('/dashboard');
+// 	});
+// }
+
+
+// VIEW CARDS BEGIN
+
+
+
+
+function findSubjects(username, callback) {
+        var queryString = 'SELECT students.username, subjects.subject ' +
+		'FROM students LEFT JOIN subjects ON (students.userId = subjects.userId AND students.' + username + ' = ?' +
+		'WHERE subjects.userId = ?';
+        connection.query(queryString, [username], function(err, result) {
+           // console.log(result);
+           callback(result);
+        });
+};
+
+module.exports.findSubjects = findSubjects;
+
