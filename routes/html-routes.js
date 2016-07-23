@@ -37,7 +37,7 @@ module.exports = function(app){
 
 	app.get('/', function(req, res){
 		res.render('index', {
-			welcomeText: "Sign In",
+			welcomeText: "Please sign in.",
 			actionBtn: 'signin',
 			message: req.flash('error')[0],
 			otherAction: "Signup"
@@ -50,7 +50,7 @@ module.exports = function(app){
 
 	app.get('/signup', function(req, res){
 		res.render('index', {
-			welcomeText: "Sign Up",
+			welcomeText: "Welcome student, please register.",
 			actionBtn: 'signup',
 			otherAction: "Signin"
 		});

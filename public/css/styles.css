@@ -8,6 +8,13 @@ h1, h2, h3 {
 body {
   background-color: #c1c1c1;
 }
+li .active {
+  background-color: #079fa3;
+}
+#learnMoreAboutButton {
+  background-color: #079fa3;
+  border-radius: 5px;
+}
 .progress {
   background-color: red;
 }
