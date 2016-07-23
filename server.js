@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var session = require('express-session');
 var orm = require('./configuration/orm.js');
-var PORT = 8080 || process.env;
+var PORT = 8080 || process.env.PORT;
 
 //Heroku + jawsDB
 var mysql = require('mysql');
