@@ -102,7 +102,7 @@ module.exports = function(app){
   	var theuser = req.user.userID;
   	orm.getAllDecks(theuser, function(data){
   		var deckdata = data;
-  		res.render('decks', {user: deckdata});
+  		res.render('decks', {decks: deckdata});
   	})
   });
 
