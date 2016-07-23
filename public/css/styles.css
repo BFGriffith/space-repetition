@@ -9,7 +9,15 @@ body {
   background-color: #c1c1c1;
 }
 li .active {
-  background-color: #079fa3;
+  background-color: #079FA3;
+}
+/* BUTTONS */
+.spacedButton {
+  background-color: #079FA3 !important;
+  border-radius: 5px !important;
+}
+.spacedButton:hover {
+  background-color: #008E8A !important;
 }
 /* landingPage */
 #introJumbotron {
@@ -17,7 +25,7 @@ li .active {
   margin-top: 20px;
 }
 #learnMoreAboutButton, #dashboardButton {
-  background-color: #079fa3;
+  background-color: #079FA3;
   border-radius: 5px;
 }
 #learnMoreAboutButton:hover, #dashboardButton:hover {
@@ -28,9 +36,14 @@ li .active {
   margin-top: 20px;
 }
 /* SUBJECTS */
-.subjectDisplay {
+.subjectDisplay, .deckDisplay {
   margin-top: 20px;
-  background-color: #e2e2e2;
+  background-color: #079FA3;
+}
+/* DECKS */
+.subjectCaption, .deckCaption {
+  background-color: #e2e2e2 !important;
+  border-radius: 5px !important;
 }
 /* studyView */
 #studyViewProgress {

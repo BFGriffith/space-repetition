@@ -34,7 +34,6 @@ passport.deserializeUser(function(user, done) {
 module.exports = function(app){
 
 	//GETs
-
 	app.get('/', function(req, res){
 		res.render('index', {
 			welcomeText: "Please sign in.",
@@ -73,7 +72,6 @@ module.exports = function(app){
 
 	//====================
 	//ROUTES:
-
 	app.get('/about', function(req, res){
     res.render('about');
     /*
@@ -103,12 +101,15 @@ module.exports = function(app){
 	 res.render('deckCreation');
 	});
 
+  app.get('/subjectCreation', function(req, res){
+	 res.render('subjectCreation');
+	});
+
 	app.get('/studyView', function(req, res){
 	 res.render('studyView');
 	});
 
 	//POSTs
-
 	app.post('/signin', passport.authenticate('local',{failureRedirect:'/', failureFlash:'Wrong Username or Password'}), function(req, res){
 		res.redirect('/dashboard');
 	});
