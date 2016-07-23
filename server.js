@@ -7,6 +7,7 @@ var passport = require('passport');
 var session = require('express-session');
 var orm = require('./configuration/orm.js');
 var PORT = process.env.PORT || 8080;
+//var PORT = 8080 || process.env;
 
 //Heroku + jawsDB
 var mysql = require('mysql');

@@ -1,6 +1,16 @@
 // Mysql
 var mysql = require('mysql');
 
+//localhost
+/*
+var connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'SpacedRepetition_db'
+});
+*/
+//Heroku
 var connection = mysql.createConnection({
   host: 'g8r9w9tmspbwmsyo.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
   user: 'tubr3spx75yj8s8d',
