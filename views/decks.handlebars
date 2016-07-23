@@ -48,15 +48,50 @@
               </div>
             </div> -->
             <div class="row">
-              <div>
-              {{#each decks}}
-              <ul>
-              <br>
-              <li>{{deckName}} created on {{dateCreated}} - Last access: {{lastAccess}}</li>         
-              {{/each}}
-              <br>
-              <ul>
+              <div class="panel panel-default">
+
+                <div class="panel-heading">Panel heading</div>
+                  <div class="panel-body">
+
+                    <div class="panel-body">
+                    <h3>Here is where you view and manage all your decks</h3>
+                    </div>
+                    <table class="table">
+                    <tr>
+                      <th>Deck Name</th>
+                      <th>Date Created</th>
+                      <th>Last Access Date</th>
+                      <th>ADD CARDS</th>
+                      <th>REMOVE Decks</th> 
+                    </tr>
+                    {{#each decks}}
+                    <tr>
+                      <td>{{deckName}}</td>
+                      <td>{{dateCreated}}</td>
+                      <td>{{lastAccess}}</td>
+                      <td>
+                      <!-- button doesnt work -->
+                      <button type="button" class="btn btn-default">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ADD CARD
+                      </button>
+                      </td>
+                      <td>
+                      <!-- button doesnt work -->
+                      <button type="button" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> REMOVE DECK
+                      </button>
+                      </td>
+                    </tr>
+                    {{/each}}
+                    </table>
+
+                  </div>
+                </div>
+
+
               </div>
+            </div>
+
             </div>
           </div>
 
