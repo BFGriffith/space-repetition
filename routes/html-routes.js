@@ -58,13 +58,9 @@ module.exports = function(app){
 
   app.get('/dashboard', function(req,res){
 		if (req.isAuthenticated()) {
-			orm.findSubjects('username', function(data) {
-				res.render('dashboard', {
-					username: req.user.username,
-					findsubjects: data
-				})
-			});
-
+			res.render('dashboard', {
+				username: req.user.username
+			})
 		} else {
 			res.redirect('/')
 		}
