@@ -32,19 +32,15 @@
             <span class="hamburger_menu_toggle" aria-hidden="true"><img src="./images/folder_brain.png" alt="navigation sidebar toggle" height="50px" width="50px"></span>
           </button>
           <br>
-          <h1>add a new CARD to deck:</h1>
-          <form class="cardCreation">
-            <fieldset class="form-group">
-              <label for="cardTitle">card label</label>
-              <input type="text" class="form-control" id="cardTitle" placeholder="card title?">
-            </fieldset>
+          <h1>Add a new CARD to deck:</h1>
+          <form action="/cardCreation" method="POST" class="cardCreation">
             <fieldset class="form-group">
               <label for="cardFront">question or prompt:</label>
-              <textarea class="form-control" id="cardFront" rows="3"></textarea>
+              <textarea class="form-control" id="cardFront" rows="3" name="frontcard"></textarea>
             </fieldset>
             <fieldset class="form-group">
               <label for="cardBack">answer:</label>
-              <textarea class="form-control" id="cardBack" rows="5"></textarea>
+              <textarea class="form-control" id="cardBack" rows="5" name="backcard"></textarea>
             </fieldset>
             <button type="submit" class="btn btn-info spacedButton">create CARD</button>
           </form>

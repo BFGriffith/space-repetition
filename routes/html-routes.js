@@ -98,7 +98,7 @@ module.exports = function(app){
    res.render('subjects');
   });
 
-  app.get('/decks', function(req, res){
+  	app.get('/decks', function(req, res){
   	var theuser = req.user.userID;
   	orm.getAllDecks(theuser, function(data){
   		var deckdata = data;
@@ -110,11 +110,19 @@ module.exports = function(app){
 	 res.render('cardCreation');
 	});
 
+  	app.post('/cardCreation', function(req, res){
+  		//needs fix
+  		// front, back, userID, deckID
+   		orm.addCards(req.body.frontcard, req.body.backcard, 2, 2);
+   		res.redirect('/decks');
+  	});
+
+
 	// app.get('/deckCreation', function(req, res){
 	//  res.render('deckCreation');
 	// });
 
-  app.get('/subjectCreation', function(req, res){
+  	app.get('/subjectCreation', function(req, res){
 	 res.render('subjectCreation');
 	});
 
