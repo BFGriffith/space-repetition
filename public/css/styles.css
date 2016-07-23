@@ -23,6 +23,10 @@ li .active {
 #introJumbotron {
   background-color: #e2e2e2;
   margin-top: 20px;
+  text-align: center;
+}
+#introJumbotron p {
+  text-align: justify;
 }
 #learnMoreAboutButton, #dashboardButton {
   background-color: #079FA3;
