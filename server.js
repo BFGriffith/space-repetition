@@ -8,6 +8,12 @@ var session = require('express-session');
 var orm = require('./configuration/orm.js');
 var PORT = 8080 || process.env;
 
+//Heroku + jawsDB
+var mysql = require('mysql');
+var connection = mysql.createConnection(process.env.JAWSDB_URL);
+
+connection.connect();
+
 //Handlebars-------------------------------------------------------
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');

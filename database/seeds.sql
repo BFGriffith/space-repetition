@@ -1,6 +1,6 @@
 -- dummy-data inserts:
 
-----STUDENTS----
+-- STUDENTS --
 INSERT INTO students (username)
 VALUES ('Pedro');
 
@@ -31,7 +31,7 @@ VALUES ('Eric');
 INSERT INTO students (username)
 VALUES ('Caroline');
 
-----SUBJECTS----
+-- SUBJECTS --
 
 INSERT INTO subjects (subject, userID)
 VALUES ('CommandLine', 1);
@@ -263,7 +263,7 @@ VALUES ('Firebase', 10);
 
 --
 
-----DECKS----
+-- DECKS --
 
 INSERT INTO decks (deckName, userID, subjectID, CounterofAccess)
 values ('Commands', 1, 1, 1);
@@ -352,7 +352,7 @@ values ('Express syntax', 10, 68, 1);
 INSERT INTO decks (deckName, userID, subjectID, CounterofAccess)
 values ('NoSQL', 10, 70, 1);
 
-----CARDS----
+-- CARDS --
 
 INSERT INTO cards (front, back, userID, SubjectID, deckID)
 values ("ls", "lists all items in directory", 1, 1, 1);
