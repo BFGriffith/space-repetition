@@ -1,12 +1,20 @@
 var express = require('express');
-var flash = require('connect-flash');
-var app = express();
 var exphbs = require('express-handlebars');
-var bodyParser = require('body-parser');
+
+var flash = require('connect-flash');
 var passport = require('passport');
 var session = require('express-session');
-var orm = require('./configuration/orm.js');
-var PORT = 8080 || process.env;
+
+var path = require('path');
+var bodyParser = require('body-parser');
+
+var orm = require('./config/orm.js');
+
+var app = express();
+var PORT = process.env.PORT || 3000;
+
+// Allowing access to the public directory
+app.use(express.static('public'));
 
 //Handlebars-------------------------------------------------------
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
@@ -29,15 +37,16 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(express.static('public'));
 //-----------------------------------------------------------------
 
 
 //Routes-----------------------------------------------------------
 require('./routes/html-routes.js')(app);
+require('./routes/api-routes.js')(app);
 //-----------------------------------------------------------------
 
-orm.connectToDB();
+// Throws an error
+// orm.connectToDB();
 
 app.listen(PORT, function(){
   console.log('listening on port', PORT)

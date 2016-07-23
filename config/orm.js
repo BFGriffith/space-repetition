@@ -1,12 +1,4 @@
-// Mysql
-var mysql = require('mysql');
-
-var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'SpacedRepetition_db'
-});
+var connection = require('./connection.js');
 
 function connectToDB() {
   connection.connect(function(err) {
@@ -20,23 +12,103 @@ function connectToDB() {
 
 module.exports.connectToDB = connectToDB;
 
-function addUserToDB(userObj, callback) {
-  connection.query('INSERT INTO students SET ?', userObj, function(err, results) {
-    if (err) return callback(false, err)
-    callback(true.null)
-  });
-}
 
-module.exports.addUserToDB = addUserToDB;
 
-function findUser(username, callback) {
-  connection.query('SELECT * FROM students WHERE ?', {
-    username: username
-  }, function(err, user) {
-    callback(err, user)
+// ===============================================
+// ===============================================
+
+var orm = {
+
+// CRUD
+
+// CREATE
+// Create decks
+
+addDeck: function(deckName, userID, CounterofAccess){
+  return new Promise(function(resolve, reject) {
+    var queryString = 'INSERT INTO decks (deckName, userID, CounterofAccess) VALUES (?, ?, ?)';
+    connection.query(queryString, [deckName, userID, CounterofAccess], function(err, res){
+      if (err) console.log(err);
+      else resolve(res);
+    })
   })
-}
-module.exports.findUser = findUser;
+},
+
+
+// Create Cards
+
+addCards: function(front, back, userID, deckID){
+  return new Promise(function(resolve, reject) {
+    var queryString = 'INSERT INTO cards (front, back, userID, deckID) VALUES (?, ?, ?, ?)';
+    connection.query(queryString, [front, back, userID, deckID], function(err, res) {
+      if (err) console.log(err);
+      else resolve(res);
+    })
+  })
+},
+
+
+// READ
+// Display all Decks
+getAllDecks: function(userID, cb){
+  var queryString = 'SELECT * FROM decks WHERE userID = ' + userID;
+  console.log(queryString);
+  connection.query(queryString, function(err, res){
+    if (err) throw err;
+    return cb(res);
+  });
+},
+// Display Cards
+
+getAllCards: function(deckID, cb){
+  var queryString = 'SELECT * FROM cards WHERE deckID = ' + deckID;
+  console.log(queryString);
+  connection.query(queryString, function(err, res) {
+    if(err) throw err;
+    return cb(res);
+  })
+},
+
+// UPDATE
+// Update Decks
+
+// Update Cards
+
+
+
+// DELETE
+// Delete Decks
+
+
+// Delete Cards
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+};
+
+module.exports = orm;
+// ===============================================
+// ===============================================
+// ===============================================
+// ===============================================
+// ===============================================
 
 /*
 var orm = {

@@ -34,11 +34,15 @@
           <button href="#menu-toggle" type="button" class="btn btn-info spacedButton" id="menu-toggle">
             <span class="hamburger_menu_toggle" aria-hidden="true"><img src="./images/folder_brain.png" alt="navigation sidebar toggle" height="50px" width="50px"></span>
           </button><br>
+          <h1>Add a Deck:</h1>
 
-          <ul id="dashboardCounters" class="nav nav-pills" role="tablist">
-            <li role="presentation" class="active"><a href="/subjects">My SUBJECTS <span class="badge">42</span></a></li>
-            <li role="presentation"><a href="/decks">My DECKS <span class="badge">3</span></a></li>
-          </ul>
+          <form action="/adddeck" method="POST" class="deckCreation">
+            <fieldset class="form-group">
+              <label for="deckTitle">Deck name:</label>
+              <input type="text" class="form-control" id="deckTitle" placeholder="Choose a title" name="deckname">
+            </fieldset>
+            <button type="submit" class="btn btn-info spacedButton">Create deck</button>
+          </form>
 
         </div>
       </div>

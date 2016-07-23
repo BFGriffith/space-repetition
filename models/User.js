@@ -1,6 +1,7 @@
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-var orm = require('../configuration/orm.js');
+var orm = require('../config/orm.js');
+var passport1 = require('../config/passport1.js');
 
 function User (userObj) {
 	this.username = userObj.username
@@ -10,7 +11,7 @@ function User (userObj) {
 module.exports = User
 
 module.exports.saveUser = function(userObj, callback){
-	orm.addUserToDB(userObj, function(status, err){
+	passport1.addUserToDB(userObj, function(status, err){
 		if (err) return callback(false);
 		callback(true);
 	});

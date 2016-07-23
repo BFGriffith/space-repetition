@@ -1,15 +1,18 @@
 var UserModel = require('../models/User.js');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-var orm = require('../configuration/orm.js');
+var orm = require('../config/orm.js');
+var passport1 = require('../config/passport1.js');
 
+var path = require('path');
+var fs = require('fs');
 
 //Setting the strategy for Passport
 passport.use(new LocalStrategy({passReqToCallback : true},
   function(req, username, password, done) {
 
   	//Searching the ORM for the user in the database
-  	orm.findUser(username, function(err, user){
+  	passport1.findUser(username, function(err, user){
   		user = user[0];
   		if (err) { return done(err); }
       if (!user) { return done(null, false); }
@@ -79,6 +82,13 @@ module.exports = function(app){
 		})
     */
 	});
+  	app.get('/adddeck', function(req, res){
+   		res.render('adddeck');
+  	});
+  	app.post('/adddeck', function(req, res){
+   		orm.addDeck(req.body.deckname, req.user.userID, 0);
+   		res.redirect('/decks');
+  	});
 
   app.get('/landingPage', function(req, res){
    res.render('landingPage');
@@ -89,16 +99,20 @@ module.exports = function(app){
   });
 
   app.get('/decks', function(req, res){
-   res.render('decks');
+  	var theuser = req.user.userID;
+  	orm.getAllDecks(theuser, function(data){
+  		var deckdata = data;
+  		res.render('decks', {user: deckdata});
+  	})
   });
 
 	app.get('/cardCreation', function(req, res){
 	 res.render('cardCreation');
 	});
 
-	app.get('/deckCreation', function(req, res){
-	 res.render('deckCreation');
-	});
+	// app.get('/deckCreation', function(req, res){
+	//  res.render('deckCreation');
+	// });
 
   app.get('/subjectCreation', function(req, res){
 	 res.render('subjectCreation');
@@ -107,6 +121,13 @@ module.exports = function(app){
 	app.get('/studyView', function(req, res){
 	 res.render('studyView');
 	});
+
+	app.get('/myinfo', function(req, res){
+		var userid = parseInt(req.user.userID);
+		
+
+		res.render('myinfo');
+	})
 
 	//POSTs
 	app.post('/signin', passport.authenticate('local',{failureRedirect:'/', failureFlash:'Wrong Username or Password'}), function(req, res){
