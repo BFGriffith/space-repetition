@@ -61,14 +61,20 @@
                       <th>Deck Name</th>
                       <th>Date Created</th>
                       <th>Last Access Date</th>
+                      <th>View Deck<th>
                       <th>ADD CARDS</th>
-                      <th>REMOVE Decks</th> 
+                      <th>REMOVE DECK</th> 
                     </tr>
                     {{#each decks}}
                     <tr>
                       <td>{{deckName}}</td>
                       <td>{{dateCreated}}</td>
                       <td>{{lastAccess}}</td>
+                      <td>
+                      <button type="button" class="btn btn-default">
+                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> VIEW
+                      </button>
+                      </td>
                       <td>
                       <!-- button doesnt work -->
                       <button type="button" class="btn btn-default">
